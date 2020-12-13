@@ -24,14 +24,15 @@ public class StringСoncat {
             string = string+s;
     }
         System.out.println(string);
+
         return string;
 }
-
     public static String multiply(String s, int count) {
         String string2 = "";
         for (int i = 0; i < count; i++) {
             string2 = string2+s;
         }
+
         System.out.println(string2);
         return string2;
     }
