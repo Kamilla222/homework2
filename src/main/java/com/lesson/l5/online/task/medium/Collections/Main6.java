@@ -30,6 +30,20 @@ public class Main6 {
         for (int i = 0; i < 10; i++) {
             list.add(bufferedReader.readLine());
         }
+        int max = 0;
+        int min = 0;
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(min).length() < list.get(i).length()) {
+                min = i;
+            }
+            if (list.get(max).length() > list.get(i).length()) {
+                max = i;
+            }
+        }
+        if (min < max) {
+            System.out.println(list.get(min));
+        } else
+            System.out.println(list.get(max));
 
     }
 }

@@ -19,17 +19,21 @@ package com.lesson.l5.online.task.medium;
 public class StringСoncat {
 
     public static String multiply(String s) {
+        String string = "";
         for (int i = 0; i < 5; i++) {
-            System.out.print(s);
+            string = string+s;
     }
-        return s;
+        System.out.println(string);
+        return string;
 }
 
     public static String multiply(String s, int count) {
+        String string2 = "";
         for (int i = 0; i < count; i++) {
-            System.out.print(s);
+            string2 = string2+s;
         }
-        return s;
+        System.out.println(string2);
+        return string2;
     }
 
     public static void main(String[] args) {
