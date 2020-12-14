@@ -1,5 +1,9 @@
 package com.lesson.l5.online.task.medium.primitiveMassive;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 /**
 1. В методе initializeArray():
 1.1. Создайте массив на 20 чисел
@@ -14,15 +18,31 @@ package com.lesson.l5.online.task.medium.primitiveMassive;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
+        int [] array = initializeArray();
+        int max = max(array);
+        System.out.println(max);
 
     }
 
-    public static int[] initializeArray(){
+    public static int[] initializeArray() throws IOException {
+        int [] array = new int [3];
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i<array.length; i++) {
+            array[i] = Integer.parseInt(bufferedReader.readLine());
+        }
         // создай и заполни массив
-        return new int[0];
+        //return new int[0];
+        return array;
         }
 
         public static int max(int[] array){
-            return 0;
+        int max = array[20];
+        for (int i = 0; i < array.length; i++) {
+            if (max > array[i])
+                max = array [i];
+
+
+        }
+            return max;
         }
 }

@@ -1,5 +1,8 @@
 package com.lesson.l5.online.task.medium.primitiveMassive;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 /**
  * 1. Создать массив на 10 строк.
  * 2. Ввести с клавиатуры 8 строк и сохранить их в массив.
@@ -12,7 +15,16 @@ package com.lesson.l5.online.task.medium.primitiveMassive;
  * Программа должна выводить на экран массив (10
  */
 public class Main1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String[] strings = new String[10];
+
+        for (int i = 0; i < 8; i++) {
+            strings[i] = bufferedReader.readLine();
+        }
+        for (int j = strings.length - 1; j >= 0; j--) {
+            System.out.println(strings[j]);
+        }
     }
 }
