@@ -3,10 +3,7 @@ package com.lesson.l5.online.task.medium.Collections;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
 Выражаемся покороче
@@ -32,7 +29,16 @@ public class Main3 {
         for (int i = 0; i < 5; i++) {
             list.add(bufferedReader.readLine());
         }
-        list.sort(Comparator.comparing(String::length));
-        System.out.println(list);
+        Comparator<String> comparator = Comparator.comparingInt(String::length);
+        list.sort(comparator);
+        String tempString = list.get(0);
+        List<String> listConclusion = new ArrayList<>();
+        listConclusion.add(tempString);
+        for (int i = 1; i < list.size(); i++) {
+            if (tempString.length() == list.get(i).length()) {
+                listConclusion.add(list.get(i));
+            }
+        }
+        listConclusion.forEach(System.out::println);
     }
 }

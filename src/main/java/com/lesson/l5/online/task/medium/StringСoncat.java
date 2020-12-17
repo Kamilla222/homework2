@@ -19,22 +19,22 @@ package com.lesson.l5.online.task.medium;
 public class StringСoncat {
 
     public static String multiply(String s) {
-        String string = "";
+        StringBuilder string = new StringBuilder();
         for (int i = 0; i < 5; i++) {
-            string = string+s;
+            string.append(s);
     }
         System.out.println(string);
 
-        return string;
+        return string.toString();
 }
     public static String multiply(String s, int count) {
-        String string2 = "";
+        StringBuilder string2 = new StringBuilder();
         for (int i = 0; i < count; i++) {
-            string2 = string2+s;
+            string2.append(s);
         }
 
         System.out.println(string2);
-        return string2;
+        return string2.toString();
     }
 
     public static void main(String[] args) {
