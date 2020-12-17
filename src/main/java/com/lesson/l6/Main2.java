@@ -36,6 +36,7 @@ public class Main2 {
         LocalDate localDate = LocalDate.now();
         System.out.println(localDate);
         LocalDate localDate1 = LocalDate.of(2000, 2,1);
+
         System.out.println(localDate1);
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         System.out.println(localDate.format(dateTimeFormatter));
