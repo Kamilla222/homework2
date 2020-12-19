@@ -1,6 +1,6 @@
 package com.lesson.l7.task;
 
-import com.sun.xml.internal.ws.developer.Serialization;
+//import com.sun.xml.internal.ws.developer.Serialization;
 
 /**Добавь одну операцию по преобразованию типа, чтобы на экран вывелось 9.
  short number = 9;

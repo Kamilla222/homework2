@@ -27,7 +27,7 @@ public class Main {
         System.out.println(list.size());
         for (String s : list) {
             System.out.println(s);
-            
+
 
         }
 

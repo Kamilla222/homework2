@@ -24,9 +24,16 @@ public class Main {
     public static void main(String[] args) {
 
     }
-
-    public static Integer[] sort(Integer[] array) {
-        //implement logic here
-        return array;
-    }
 }
+
+//    public static Integer[] sort(Integer[] array) {
+//        Arrays.sort(array);
+//        int n = array.length;
+//if (double mediana = n % 2 ==1) {
+
+//        }
+//
+//        //implement logic here
+//        return array;
+//    }
+//}
