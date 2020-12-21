@@ -33,11 +33,11 @@ public class Main3 {
         }*/
 
         //С Java 8
-        Stream.of(Integer.parseInt(bufferedReader.readLine()),
+       /* Stream.of(Integer.parseInt(bufferedReader.readLine()),
                 Integer.parseInt(bufferedReader.readLine()),
                 Integer.parseInt(bufferedReader.readLine()))
                 .sorted(Comparator.reverseOrder())
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
 
 
 //
