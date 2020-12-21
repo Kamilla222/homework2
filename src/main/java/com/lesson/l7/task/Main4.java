@@ -8,6 +8,16 @@ package com.lesson.l7.task;
 //Перехватить исключение (и вывести его на экран), указав его тип, возникающее при выполнении кода
 public class Main4 {
     public static void main(String[] args) {
+        int [] m = new int [2];
+
+        try {
+            m [8]=5;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.toString());
+        }
+
 
     }
 }
