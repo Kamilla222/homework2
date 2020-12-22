@@ -17,15 +17,14 @@ import java.util.Locale;
 //Используй Java 8
 public class Main2 {
     public static void main(String[] args) {
-
-        System.out.print(isDateOdd(" "));
+        System.out.print(isDateOdd("May 1 2013"));
     }
     public static boolean isDateOdd(String date) {
 
-        LocalDate localDate = LocalDate.of(2013, 5, 1); //???
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MMMM d yyyy",
                 new Locale("en", "EN"));
-        System.out.println(localDate.format(dateTimeFormatter));
+        LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
+        System.out.print(localDate.format(dateTimeFormatter).toUpperCase() + " = ");
 
         if (localDate.getDayOfYear() % 2 == 0) {
             return false;

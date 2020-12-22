@@ -6,10 +6,7 @@ package com.lesson.l7.task;
 import javax.swing.text.DateFormatter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.DateTimeException;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.WeekFields;
@@ -56,12 +53,12 @@ import java.util.Locale;
 //Используй Java 8
 public class Main {
     public static void main(String[] args) {
-        printDate("21.4.2014 15:56:45");
+        printDate("21.04.2014 15:56:45");
         System.out.println();
-        printDate("21.4.2014");
+        printDate("21.04.2014");
         System.out.println();
         printDate("17:33:40");
-
+        System.out.println();
     }
     public static void printDate(String date) {
 
@@ -87,7 +84,7 @@ public class Main {
             return;
 
         if (printDate) {
-            LocalDate localDate = LocalDate.of(2014, 4, 21); //?
+            LocalDateTime localDate = LocalDate.parse(date, dateTimeFormatter).atStartOfDay();
             System.out.println(localDate.format(dateTimeFormatter));
             System.out.println("День: " + localDate.getDayOfMonth());
             System.out.println("День недели: " + localDate.getDayOfWeek().getValue());
@@ -98,7 +95,7 @@ public class Main {
             System.out.println("Год: " + localDate.getYear());
         }
         if (printTime) {
-            LocalTime localTime = LocalTime.of(17, 33, 40); //?
+            LocalTime localTime = LocalTime.parse(date, dateTimeFormatter); //?
             System.out.println("AM или PM: " + (localTime.get(ChronoField.AMPM_OF_DAY) == 0 ? "AM" : "PM")); //?
             System.out.println("Часы: " + localTime.get(ChronoField.HOUR_OF_AMPM));
             System.out.println("Часы дня: " + localTime.getHour());

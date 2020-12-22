@@ -8,30 +8,21 @@ package com.lesson.l7.task;
     /*Создай свой Exception*/
 public class Main5 {
     public static void main(String[] args)  {
-
         try {
             int[] m = new int[2];
             m[8] = 5;
-            {
-                throw new myArrayIndexOutException();
-            }
-        } catch (myArrayIndexOutException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
     }
 }
-class myArrayIndexOutException extends Exception {
+class myArrayIndexOutException extends ArrayIndexOutOfBoundsException {
     public myArrayIndexOutException() {
     }
-    public myArrayIndexOutException(String message) {
-        super(message);
+    public myArrayIndexOutException(String s) {
+        super(s);
     }
-
-    public myArrayIndexOutException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public myArrayIndexOutException(Throwable cause) {
-        super(cause);
+    public myArrayIndexOutException(int index) {
+        super(index);
     }
 }
