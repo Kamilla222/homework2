@@ -16,7 +16,7 @@ package com.lesson.l5.online.task.medium;
  * Метод multiply(String s, int count) должен возвращать строку повторенную count раз.
  * Метод multiply(String s) должен возвращать строку повторенную 5 раз.
  */
-public class StringСoncat {
+public class StringConcat {
 
     public static String multiply(String s) {
         StringBuilder string = new StringBuilder();
@@ -38,8 +38,8 @@ public class StringСoncat {
     }
 
     public static void main(String[] args) {
-       StringСoncat.multiply("hi");
-       StringСoncat.multiply("hello",2);
+       StringConcat.multiply("hi");
+       StringConcat.multiply("hello",2);
 
     }
 }

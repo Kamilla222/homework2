@@ -1,4 +1,4 @@
-package com.lesson.l9.при_проектировании_машины;
+package com.lesson.l9.createcar;
 
 import com.lesson.l9.pattern.MySingleton;
 import lombok.AllArgsConstructor;
@@ -113,6 +113,7 @@ public class TeslaCar {
                 System.out.println("bla-bla");
             }
         };
+
         car.sayCar();
         car2.sayCar();
         Car2 car21 = myName -> System.out.println(myName);;

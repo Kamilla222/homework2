@@ -1,4 +1,4 @@
-package com.lesson.l9.анонимный_класс;
+package com.lesson.l9.anonymclass;
 
 public class LGPult2 implements Pult {
     @Override

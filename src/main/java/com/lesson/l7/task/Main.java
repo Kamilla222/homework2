@@ -53,17 +53,18 @@ import java.util.Locale;
 //Используй Java 8
 public class Main {
     public static void main(String[] args) {
-        printDate("21.04.2014 15:56:45");
-        System.out.println();
         printDate("21.04.2014");
+        System.out.println();
+        printDate("21.04.2014 15:56:45");
         System.out.println();
         printDate("17:33:40");
         System.out.println();
     }
     public static void printDate(String date) {
-        switch (date) {
 
-            case date.contains(" "):
+        switch (date.length()) {
+
+            case 19 :
 
                 DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
                 LocalDateTime localDate1 = LocalDateTime.parse(date, dateTimeFormatter);
@@ -82,7 +83,7 @@ public class Main {
                 System.out.println("Минуты: " + localTime1.getMinute());
                 System.out.println("Секунды: " + localTime1.getSecond());
                 break;
-            case ".":
+            case 10:
 
                 dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
                 LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
@@ -96,7 +97,7 @@ public class Main {
                 System.out.println("Год: " + localDate.getYear());
                 break;
 
-            case ":":
+            case 8:
 
                 dateTimeFormatter = DateTimeFormatter.ofPattern("H:m:s");
                 LocalTime localTime = LocalTime.parse(date, dateTimeFormatter); //?
@@ -110,48 +111,4 @@ public class Main {
 
         }
     }
-
 }
-
-//        if (date.contains(" ")) {
-//            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
-//            LocalDateTime localDate = LocalDateTime.parse(date, dateTimeFormatter);
-//            System.out.println(localDate.format(dateTimeFormatter));
-//            System.out.println("День: " + localDate.getDayOfMonth());
-//            System.out.println("День недели: " + localDate.getDayOfWeek().getValue());
-//            System.out.println("День месяца: " + localDate.getDayOfMonth());
-//            System.out.println("День года: " + localDate.getDayOfYear());
-//            System.out.println("Неделя месяца: " + localDate.get(WeekFields.of(Locale.getDefault()).weekOfMonth()));
-//            System.out.println("Месяц: " + localDate.getMonthValue());
-//            System.out.println("Год: " + localDate.getYear());
-//            System.out.println("AM или PM: " + (localDate.get(ChronoField.AMPM_OF_DAY) == 0 ? "AM" : "PM")); //?
-//            System.out.println("Часы: " + localDate.get(ChronoField.HOUR_OF_AMPM));
-//            System.out.println("Часы дня: " + localDate.getHour());
-//            System.out.println("Минуты: " + localDate.getMinute());
-//            System.out.println("Секунды: " + localDate.getSecond());
-//
-//        } else if (date.contains(":")) {
-//            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("H:m:s");
-//            LocalTime localDate = LocalTime.parse(date, dateTimeFormatter);
-//            System.out.println("AM или PM: " + (localDate.get(ChronoField.AMPM_OF_DAY) == 0 ? "AM" : "PM")); //?
-//            System.out.println("Часы: " + localDate.get(ChronoField.HOUR_OF_AMPM));
-//            System.out.println("Часы дня: " + localDate.getHour());
-//            System.out.println("Минуты: " + localDate.getMinute());
-//            System.out.println("Секунды: " + localDate.getSecond());
-//
-//        } else if (date.contains(".")) {
-//            DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-//            LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
-//            System.out.println(localDate.format(dateTimeFormatter));
-//            System.out.println("День: " + localDate.getDayOfMonth());
-//            System.out.println("День недели: " + localDate.getDayOfWeek().getValue());
-//            System.out.println("День месяца: " + localDate.getDayOfMonth());
-//            System.out.println("День года: " + localDate.getDayOfYear());
-//            System.out.println("Неделя месяца: " + localDate.get(WeekFields.of(Locale.getDefault()).weekOfMonth()));
-//            System.out.println("Месяц: " + localDate.getMonthValue());
-//            System.out.println("Год: " + localDate.getYear());
-//        }
-//
-//
-//    }
-//}

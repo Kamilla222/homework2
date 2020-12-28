@@ -1,4 +1,4 @@
-package com.lesson.l9.при_продажи_деталей_у_машин;
+package com.lesson.l9.saledeatailsofcar;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

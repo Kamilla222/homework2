@@ -1,6 +1,6 @@
-package com.lesson.l9.при_продажи_деталей_у_машин;
+package com.lesson.l9.saledeatailsofcar;
 
-import com.lesson.l9.при_проектировании_машины.TeslaCar;
+import com.lesson.l9.createcar.TeslaCar;
 import lombok.Data;
 
 @Data
