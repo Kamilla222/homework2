@@ -88,3 +88,4 @@ interface Calculate2 {
         return a+b;
     }
 }
+

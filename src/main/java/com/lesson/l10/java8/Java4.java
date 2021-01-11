@@ -1,5 +1,7 @@
 package com.lesson.l10.java8;
 
+import com.lesson.Cat;
+
 import java.util.Optional;
 
 public class Java4 {

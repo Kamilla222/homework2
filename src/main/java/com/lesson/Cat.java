@@ -41,9 +41,9 @@ public class Cat extends Animal{
                 '}';
     }
 
-    @Override
+    /*@Override
     public void voice() {
 
-    }
+    }*/
 
 }

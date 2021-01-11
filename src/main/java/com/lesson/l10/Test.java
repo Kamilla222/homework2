@@ -11,7 +11,7 @@ public class Test {
         Cat cat3 = cat; // присваиваю ссылку 1
        // Cat cat4 = new Cat("a",2);
         cat.setAge(12);
-     cat.getA()
+  //   cat.getA()
         System.out.println(cat.equals(cat1));
         System.out.println(cat.equals(cat2));
         System.out.println(cat3);
@@ -22,7 +22,7 @@ public class Test {
         System.out.println(b);*/
         cat.jump();
         cat.run();
-        cat.voice();
+      //  cat.voice();
         //c++ Diamond Problem
     }
 }
